@@ -1,0 +1,28 @@
+@charset "UTF-8";
+html{
+    /* ページ内リンクゆっくり飛ぶ */
+    scroll-behavior: smooth;
+}
+*{
+    /* 値を初期化 */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+
+    width: 100vh;
+}
+
+/* 全体共通クラスーーーーーーーーーーーーー*/
+.wrapper{
+    /* 水平でセンターにする */
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+img{
+width: 500px;
+}

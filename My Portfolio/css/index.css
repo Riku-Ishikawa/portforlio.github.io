@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/* 全体共通
+------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body
+----------------------------------------------------------------------------- */
+/* 全体部分指定
+----------------------------------------------------------------------------- */
+/* 要素間隔 */
+.interval{
+    margin:0px 50px 0px;
+    
+}
+.top_interval{
+    padding-top: 100px;
+}
+ /* 横並び、中央寄せ */
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+/* 文字が浮き出るアニメーション */
+.stand_out{
+    font-size: 50px;
+    animation: fadein 5s linear;
+    opacity: 1;
+}
+    @keyframes fadein {
+    from { opacity: 0;}
+}
+
+h2{
+    font-size: 50px;
+}
+
+/* 左右が消えるボーダー線 */
+hr{
+    border: none;
+    height: 1px;
+    background-image:
+        linear-gradient(
+            to right,
+            transparent,
+            #888 50%,
+            transparent
+    );
+}
+
+
+a {
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: cadetblue;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+a:hover::after{
+    transform: scale(1, 1);
+}
+/* header
+----------------------------------------------------------------------------- */
+.logo{
+    width: 300px;
+    margin-top: 20px;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    position: fixed;/* スクトールしても固定 */
+    top:0;/* 上の余白無くす */
+}
+
+.nav,.nav_content{
+    color: aliceblue;
+    display: flex;
+    font-size: 15px;
+}
+
+.nav_list{
+    list-style-type: none;
+    color: aliceblue;
+    margin: 25px 50px;
+}
+/*サイトトップ
+----------------------------------------------------------------------------- */
+.site_top{
+    margin-top: 100px;
+    background-size: cover;
+    background-position: center top;
+    text-align: center;
+}
+
+/*サイトトップの文字 */
+.site_text{
+    /* width:100vw; */
+    height:25vw;
+    margin: 30vh;
+    line-height: 40px; /* 行間の設定 */
+    font-family: Papyrus;/* 文字のフォント */
+}
+.span_1{
+    font-size: 100px;
+    color: cadetblue;
+
+    display: inline-block;
+    transition: all 1s;
+}
+.span_1:hover {
+    color: cadetblue;
+    transform: rotateY(360deg);
+}
+
+.span_2{
+    font-size: 50px;
+}
+
+.span_3{
+    margin-left: 200px;
+    line-height:150%;
+    font-size: 50px;
+}
+
+
+/*about
+----------------------------------------------------------------------------- */
+#about{
+    width: 100%;
+    height: 100%;
+}
+#about h3{
+    font-size: 25px;
+}
+
+#about .block{
+    padding: 30px;
+}
+
+
+.my_photo{
+    min-width: 10px;
+    width: 150px; /*横幅*/
+    height: auto; /*高さ（要素に合わして変化する）*/
+
+}
+
+.about_me{
+    display: flex;
+    align-items: flex-end;
+
+}
+.button{
+    padding: 10px;
+    background-color: white;
+    border: solid;
+    border-radius: 5px; /* 半径が8pxの角丸 */
+}
+.more{
+    padding:0px 10px 0px 10px;
+    color: black;
+}
+
+/*work
+----------------------------------------------------------------------------- */
+#works{
+    width: 100%;
+    height: 100%;
+}
+#works p{
+    display: flex;
+    justify-content: center;
+}
+
+#works a{
+    color: black;
+}
+
+.zoom-box{
+    overflow: hidden;
+}
+
+.hover_box{
+    width: 300px;
+    margin:0px 50px 0px;
+    /* ホバーアニメーション */
+    transition-duration: .5s;
+}
+.hover_box:hover{
+    /* ホバー後の大きさ */
+        transform: scale(1.2);
+}
+
+
+
+
+/*footer
+----------------------------------------------------------------------------- */
+footer{
+    background-color: black;
+}
+footer p{
+    font-size: 12px;
+    color: white;
+    padding:20px 0px 20px 0px;
+}
